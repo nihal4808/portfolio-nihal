@@ -7,17 +7,17 @@ import Image from "next/image";
 
 export function HeroBlock() {
     return (
-        <section id="hero" className="relative flex flex-col items-center justify-start overflow-hidden bg-[#0f172a] min-h-screen w-full pt-48 md:pt-60 pb-20">
+        <section id="hero" className="relative flex flex-col items-center justify-start overflow-hidden bg-black min-h-screen w-full pt-48 md:pt-60 pb-20">
             {/* Animated background grid / image */}
             <div className="absolute inset-0 z-0 h-full w-full">
                 <Image
-                    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1920&auto=format&fit=crop"
-                    alt="AI Logic Pattern"
+                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop"
+                    alt="Dark Tech Pattern"
                     fill
-                    className="object-cover opacity-10 grayscale"
+                    className="object-cover opacity-[0.03] grayscale"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="absolute inset-0 bg-[#0f172a]/80" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="absolute inset-0 bg-black" />
             </div>
 
             <div className="relative z-10 mx-auto max-w-5xl text-center px-6">
@@ -32,7 +32,7 @@ export function HeroBlock() {
                         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                         className="mb-6 inline-block"
                     >
-                        <div className="mx-auto h-32 w-32 rounded-3xl border-2 border-white/10 bg-[#1e293b]/50 shadow-2xl overflow-hidden relative group p-1 glass">
+                        <div className="mx-auto h-32 w-32 rounded-3xl border-2 border-white/10 bg-white/5 shadow-2xl overflow-hidden relative group p-1 glass">
                             <div className="w-full h-full rounded-2xl overflow-hidden relative">
                                 <Image
                                     src="/nihal-avatar.png"
@@ -42,7 +42,7 @@ export function HeroBlock() {
                                 />
                             </div>
                         </div>
-                        <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#38bdf8] rounded-full blur-xl animate-pulse opacity-50"></div>
+                        <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-white/20 rounded-full blur-xl animate-pulse opacity-50"></div>
                     </motion.div>
 
                     <motion.h1
@@ -52,7 +52,7 @@ export function HeroBlock() {
                         className="mb-4 text-5xl font-black text-white md:text-8xl tracking-tighter leading-[0.9]"
                     >
                         MUHAMMED <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#22c55e] to-[#38bdf8] bg-[length:200%_auto] animate-text-shimmer">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-400 to-white bg-[length:200%_auto] animate-text-shimmer">
                             NIHAL KP
                         </span>
                     </motion.h1>
@@ -63,7 +63,7 @@ export function HeroBlock() {
                         transition={{ delay: 0.35, duration: 0.6 }}
                         className="mb-8 inline-block"
                     >
-                        <span className="px-4 py-1.5 bg-[#38bdf8]/10 text-[#38bdf8] text-[12px] font-black uppercase tracking-[0.4em] rounded-full border border-[#38bdf8]/20 glow-primary/20">
+                        <span className="px-4 py-1.5 bg-white/5 text-slate-300 text-[12px] font-black uppercase tracking-[0.4em] rounded-full border border-white/10">
                             AI & DATA ENGINEER
                         </span>
                     </motion.div>
@@ -84,7 +84,7 @@ export function HeroBlock() {
                         transition={{ delay: 0.5, duration: 0.6 }}
                         className="mb-12 flex flex-wrap justify-center gap-5"
                     >
-                        <Button size="lg" className="bg-[#38bdf8] hover:bg-[#38bdf8]/90 text-[#0f172a] font-black tracking-widest rounded-xl px-8 h-14 glow-primary border-none">
+                        <Button size="lg" className="bg-white hover:bg-slate-200 text-black font-black tracking-widest rounded-xl px-8 h-14 border-none transition-all">
                             <Mail className="mr-2 h-5 w-5" />
                             INITIATE DATA STREAM
                         </Button>
@@ -111,7 +111,7 @@ export function HeroBlock() {
                                 target="_blank"
                                 whileHover={{ scale: 1.1, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-slate-400 border border-white/5 transition-all hover:bg-[#38bdf8]/10 hover:text-white hover:border-[#38bdf8]/30 group"
+                                className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-slate-400 border border-white/5 transition-all hover:bg-white/10 hover:text-white hover:border-white/20 group"
                             >
                                 <social.icon className="h-6 w-6 group-hover:glow-primary" />
                             </motion.a>
