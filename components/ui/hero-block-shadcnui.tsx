@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function HeroBlock() {
     return (
-        <section id="hero" className="relative flex items-center justify-center overflow-hidden bg-[#0f172a] min-h-screen w-full">
+        <section id="hero" className="relative flex flex-col items-center justify-start overflow-hidden bg-[#0f172a] min-h-screen w-full pt-48 md:pt-60 pb-20">
             {/* Animated background grid / image */}
             <div className="absolute inset-0 z-0 h-full w-full">
                 <Image
@@ -49,13 +49,24 @@ export function HeroBlock() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
-                        className="mb-6 text-5xl font-black text-white md:text-8xl tracking-tighter leading-[0.9]"
+                        className="mb-4 text-5xl font-black text-white md:text-8xl tracking-tighter leading-[0.9]"
                     >
-                        AI & DATA <br />
+                        MUHAMMED <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#22c55e] to-[#38bdf8] bg-[length:200%_auto] animate-text-shimmer">
-                            ENGINEER
+                            NIHAL KP
                         </span>
                     </motion.h1>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.35, duration: 0.6 }}
+                        className="mb-8 inline-block"
+                    >
+                        <span className="px-4 py-1.5 bg-[#38bdf8]/10 text-[#38bdf8] text-[12px] font-black uppercase tracking-[0.4em] rounded-full border border-[#38bdf8]/20 glow-primary/20">
+                            AI & DATA ENGINEER
+                        </span>
+                    </motion.div>
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
