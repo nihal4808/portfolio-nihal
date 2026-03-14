@@ -10,32 +10,32 @@ export function GlowingEffectDemo() {
             <GridItem
                 area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
                 icon={<Cpu className="h-4 w-4" />}
-                title="Scalable AI Infrastructure"
-                description="Architecting high-performance clusters for real-time data ingestion and model inference."
+                title="Computer Vision & AI"
+                description="Developing research-grade Pothole Detection and Severity Estimation frameworks using YOLO and depth models."
             />
             <GridItem
                 area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-                icon={<Globe className="h-4 w-4" />}
-                title="Global Digital Presence"
-                description="Deploying edge-cached architectures to ensure sub-100ms latency globally."
+                icon={<Zap className="h-4 w-4" />}
+                title="Cross-Platform Systems"
+                description="Architecting integrated experiences like Gyro-Ball, bridging Flutter mobile controllers with Python-based PC engines."
             />
             <GridItem
                 area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-                icon={<Database className="h-4 w-4" />}
-                title="Data Engineering Pipeline"
-                description="Building robust ETL processes that transform raw chaos into actionable intelligence."
+                icon={<Globe className="h-4 w-4" />}
+                title="Real-time Web Ecosystems"
+                description="Building scalable multiplayer environments like Duno and cloud-integrated developer tools with Firebase."
             />
             <GridItem
                 area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-                icon={<Zap className="h-4 w-4" />}
-                title="Dynamic Performance"
-                description="Optimized core logic with advanced caching strategies for maximum throughput."
+                icon={<Box className="h-4 w-4" />}
+                title="Advanced Architectures"
+                description="Crafting high-performance web identities and complex state management systems with Next.js and Tailwind."
             />
             <GridItem
                 area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
                 icon={<Shield className="h-4 w-4" />}
-                title="System Security"
-                description="Implementing zero-trust protocols and end-to-end encryption for mission-critical apps."
+                title="Scalable Data ETL"
+                description="Implementing robust data pipelines and zero-trust security protocols for mission-critical software solutions."
             />
         </ul>
     );

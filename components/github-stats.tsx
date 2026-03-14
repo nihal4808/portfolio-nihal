@@ -32,7 +32,7 @@ export function GitHubStatsSection({ repos }: { repos: any[] }) {
                             />
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-1">nihal4808</h3>
-                        <p className="text-slate-500 font-bold text-xs uppercase tracking-[0.2em] mb-8">Lead Architect</p>
+                        <p className="text-slate-500 font-bold text-xs uppercase tracking-[0.2em] mb-8">AI & Full-Stack Engineer</p>
 
                         <div className="grid grid-cols-2 gap-4 w-full">
                             <div className="p-4 bg-white/5 rounded-2xl border border-white/5">

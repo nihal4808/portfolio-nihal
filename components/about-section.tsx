@@ -27,7 +27,7 @@ export function AboutSection() {
 
                     <p className="text-slate-400 text-lg md:text-xl font-medium leading-relaxed max-w-xl">
                         I am <span className="text-white font-bold">Muhammed Nihal KP</span>, a final-year AI & Data Engineering student at <span className="text-white font-bold text-glow">MES College of Engineering</span>.
-                        I specialize in building AI-powered systems, solving real-world problems, and developing modern web technologies.
+                        I am dedicated to engineering high-performance AI systems and modern full-stack products that solve complex real-world challenges.
                     </p>
 
                     <div className="pt-4 flex items-center gap-6">
