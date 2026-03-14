@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function HeroBlock() {
     return (
-        <section className="relative flex items-center justify-center overflow-hidden bg-[#0f172a] min-h-screen w-full">
+        <section id="hero" className="relative flex items-center justify-center overflow-hidden bg-[#0f172a] min-h-screen w-full">
             {/* Animated background grid / image */}
             <div className="absolute inset-0 z-0 h-full w-full">
                 <Image

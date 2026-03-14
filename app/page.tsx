@@ -2,6 +2,7 @@ import { fetchGitHubProjects } from "@/components/projects";
 import { HeroScrollDemo } from "@/components/hero-scroll-demo";
 import { AboutSection } from "@/components/about-section";
 import { GitHubStatsSection } from "@/components/github-stats";
+import { HeroBlock } from "@/components/ui/hero-block-shadcnui";
 import Image from "next/image";
 import { Github, Linkedin, Instagram, Mail, ExternalLink, ChevronRight } from "lucide-react";
 
@@ -44,68 +45,7 @@ export default async function Home() {
             </header>
 
             {/* Hero Section */}
-            <section id="hero" className="relative pt-40 md:pt-60 pb-20 md:pb-40 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16 min-h-[90vh]">
-                <div className="flex-1 max-w-2xl text-center md:text-left">
-                    <div className="flex items-center gap-3 mb-8 justify-center md:justify-start">
-                        <div className="px-3 py-1 bg-[#38bdf8]/10 text-[#38bdf8] text-[10px] font-black uppercase tracking-[0.3em] rounded-md border border-[#38bdf8]/20">
-                            v 1.0 // ACTIVE SESSION
-                        </div>
-                    </div>
-
-                    <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[0.95] tracking-tighter text-white">
-                        MUHAMMED <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#22c55e] to-[#38bdf8] bg-[length:200%_auto] animate-text-shimmer">
-                            NIHAL KP
-                        </span>
-                    </h1>
-
-                    <h2 className="text-xl md:text-2xl font-bold text-slate-300 mb-8 max-w-xl">
-                        Final-Year AI & Data Engineering Student at MES College of Engineering. <br />
-                        <span className="text-slate-500 font-medium">Synthesizing intelligence into seamless digital experiences.</span>
-                    </h2>
-
-                    <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
-                        <a href="#projects" className="btn-primary flex items-center justify-center gap-2 px-10">
-                            VIEW PROJECTS <ChevronRight size={18} />
-                        </a>
-                        <a href="#contact" className="btn-outline flex items-center justify-center gap-2 px-10">
-                            CONTACT ME
-                        </a>
-                    </div>
-
-                    <div className="mt-12 flex items-center gap-8 justify-center md:justify-start">
-                        <div className="flex flex-col">
-                            <span className="text-[#38bdf8] font-black text-2xl tracking-tighter">AI</span>
-                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Core Focus</span>
-                        </div>
-                        <div className="w-[1px] h-10 bg-white/5"></div>
-                        <div className="flex flex-col">
-                            <span className="text-[#22c55e] font-black text-2xl tracking-tighter">FULL</span>
-                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Stack Logic</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex-1 flex justify-center w-full max-w-md relative group">
-                    <div className="absolute inset-0 bg-[#38bdf8]/20 rounded-full blur-[80px] group-hover:bg-[#38bdf8]/30 transition-all duration-1000 animate-pulse"></div>
-                    <div className="relative w-72 h-72 md:w-96 md:h-96 p-2 bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-sm">
-                        <div className="w-full h-full rounded-2xl overflow-hidden relative">
-                            <Image
-                                src="/avatar.png"
-                                alt="Muhammed Nihal KP"
-                                fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-40"></div>
-                        </div>
-                    </div>
-
-                    {/* Floating Tech Labels */}
-                    <div className="absolute -top-4 -right-4 px-4 py-2 glass rounded-xl text-[10px] font-black text-[#38bdf8] border-[#38bdf8]/20 shadow-lg animate-float">PYTHON</div>
-                    <div className="absolute top-1/2 -left-10 px-4 py-2 glass rounded-xl text-[10px] font-black text-[#22c55e] border-[#22c55e]/20 shadow-lg animate-float-delayed">OPENCV</div>
-                </div>
-            </section>
+            <HeroBlock />
 
             {/* About Section */}
             <AboutSection />
