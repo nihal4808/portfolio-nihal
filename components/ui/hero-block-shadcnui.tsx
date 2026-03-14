@@ -18,7 +18,7 @@ export function HeroBlock() {
                     className="object-cover opacity-[0.03] grayscale"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/80 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black" />
             </div>
 
             <div className="relative z-10 mx-auto max-w-5xl text-center px-6">
@@ -80,7 +80,7 @@ export function HeroBlock() {
                     </motion.p>
 
                     {/* Sparkles & Gradients Integration */}
-                    <div className="w-full max-w-4xl h-40 relative mx-auto mb-12">
+                    <div className="w-full max-w-4xl h-60 relative mx-auto mb-12">
                         {/* Gradients */}
                         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-white/20 to-transparent h-[2px] w-3/4 blur-sm" />
                         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-white/30 to-transparent h-px w-3/4" />
@@ -91,15 +91,15 @@ export function HeroBlock() {
                         <SparklesCore
                             id="tsparticleshero"
                             background="transparent"
-                            minSize={0.4}
-                            maxSize={1}
-                            particleDensity={100}
+                            minSize={0.6}
+                            maxSize={1.4}
+                            particleDensity={150}
                             className="w-full h-full"
                             particleColor="#FFFFFF"
                         />
 
-                        {/* Radial Gradient to prevent sharp edges */}
-                        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                        {/* Mask to prevent sharp edges - applied via CSS mask on a sibling or container */}
+                        <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)] pointer-events-none"></div>
                     </div>
 
                     <motion.div
