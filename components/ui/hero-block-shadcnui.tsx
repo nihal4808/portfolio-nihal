@@ -4,22 +4,12 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-import { SparklesCore } from "@/components/ui/sparkles";
 
 export function HeroBlock() {
     return (
         <section id="hero" className="relative flex flex-col items-center justify-start overflow-hidden bg-black min-h-screen w-full pt-48 md:pt-60 pb-20">
-            {/* Sparkles Background */}
+            {/* Background Layer (Global Sparkles handled in layout) */}
             <div className="absolute inset-0 z-0 h-full w-full">
-                <SparklesCore
-                    id="tsparticleshero"
-                    background="transparent"
-                    minSize={0.4}
-                    maxSize={1.4}
-                    particleDensity={100}
-                    className="w-full h-full"
-                    particleColor="#FFFFFF"
-                />
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
                 <div className="absolute inset-0 bg-black/40" />
             </div>
