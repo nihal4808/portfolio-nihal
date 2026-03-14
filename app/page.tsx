@@ -60,7 +60,7 @@ export default async function Home() {
                     </h1>
 
                     <h2 className="text-xl md:text-2xl font-bold text-slate-300 mb-8 max-w-xl">
-                        4th-Year AI & Data Engineering Student at MES College of Engineering. <br />
+                        Final-Year AI & Data Engineering Student at MES College of Engineering. <br />
                         <span className="text-slate-500 font-medium">Synthesizing intelligence into seamless digital experiences.</span>
                     </h2>
 
