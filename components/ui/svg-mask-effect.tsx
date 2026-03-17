@@ -67,7 +67,7 @@ export const MaskContainer = ({
                     WebkitMaskSize: `${maskSize}px`,
                     maskPosition: `${mx}px ${my}px`,
                     maskSize: `${maskSize}px`,
-                }}
+                } as any}
                 transition={{ type: "tween", ease: "backOut", duration: 0.1 }}
                 style={{
                     WebkitMaskImage: `url("${MASK_DATA_URL}")`,
