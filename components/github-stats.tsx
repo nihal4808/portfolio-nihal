@@ -7,7 +7,7 @@ export function GitHubStatsSection({ repos }: { repos: any[] }) {
     const languages = Array.from(new Set(repos.map(r => r.language).filter(Boolean)));
 
     return (
-        <section className="py-24 px-6 max-w-7xl mx-auto bg-black relative">
+        <section className="py-24 px-6 max-w-7xl mx-auto bg-black/50 backdrop-blur-sm relative">
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
 
             <div className="mb-16">

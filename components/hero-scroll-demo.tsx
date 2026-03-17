@@ -5,7 +5,7 @@ import { GitHubRepo, ProjectCard } from "./projects";
 
 export function HeroScrollDemo({ projects }: { projects: GitHubRepo[] }) {
     return (
-        <div className="flex flex-col overflow-hidden pb-[100px] md:pb-[150px] pt-[50px] md:pt-[100px] bg-black relative">
+        <div className="flex flex-col overflow-hidden pb-[100px] md:pb-[150px] pt-[50px] md:pt-[100px] bg-black/50 backdrop-blur-sm relative">
             <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
 
             <ContainerScroll

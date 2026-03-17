@@ -4,11 +4,10 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-import { SparklesCore } from "@/components/ui/sparkles";
 
 export function HeroBlock() {
     return (
-        <section id="hero" className="relative flex flex-col items-center justify-start overflow-hidden bg-transparent min-h-screen w-full pt-48 md:pt-60 pb-20">
+        <section id="hero" className="relative flex flex-col items-center justify-start overflow-hidden bg-black/40 min-h-screen w-full pt-48 md:pt-60 pb-20">
             {/* Background Texture Overlay */}
             <div className="absolute inset-0 z-0 h-full w-full pointer-events-none">
                 <Image
@@ -79,27 +78,13 @@ export function HeroBlock() {
                         Final-year Engineer at MES College.
                     </motion.p>
 
-                    {/* Sparkles & Gradients Integration */}
-                    <div className="w-full max-w-4xl h-60 relative mx-auto mb-12">
+                    {/* Gradients Integration (Local Sparkles removed for Global) */}
+                    <div className="w-full max-w-4xl h-2 relative mx-auto mb-12 mt-12">
                         {/* Gradients */}
                         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-white/20 to-transparent h-[2px] w-3/4 blur-sm" />
                         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-white/30 to-transparent h-px w-3/4" />
                         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-slate-400/20 to-transparent h-[5px] w-1/4 blur-sm" />
                         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-slate-400/30 to-transparent h-px w-1/4" />
-
-                        {/* Core component */}
-                        <SparklesCore
-                            id="tsparticleshero"
-                            background="transparent"
-                            minSize={0.6}
-                            maxSize={1.4}
-                            particleDensity={150}
-                            className="w-full h-full"
-                            particleColor="#FFFFFF"
-                        />
-
-                        {/* Mask to prevent sharp edges - applied via CSS mask on a sibling or container */}
-                        <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)] pointer-events-none"></div>
                     </div>
 
                     <motion.div

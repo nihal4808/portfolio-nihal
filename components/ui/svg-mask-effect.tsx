@@ -1,0 +1,97 @@
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+
+function cn(...classes: (string | undefined | null | false)[]): string {
+    return classes.filter(Boolean).join(" ");
+}
+
+const MASK_DATA_URL =
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0id2hpdGUiLz48L3N2Zz4=";
+
+export const MaskContainer = ({
+    children,
+    revealText,
+    size = 40,
+    revealSize = 600,
+    className,
+}: {
+    children?: string | React.ReactNode;
+    revealText?: string | React.ReactNode;
+    size?: number;
+    revealSize?: number;
+    className?: string;
+}) => {
+    const [isHovered, setIsHovered] = useState(false);
+    const [mousePosition, setMousePosition] = useState<{ x: number | null; y: number | null }>({
+        x: null,
+        y: null,
+    });
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const handler = (e: MouseEvent) => {
+            const rect = el.getBoundingClientRect();
+            setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        };
+        el.addEventListener("mousemove", handler);
+        return () => el.removeEventListener("mousemove", handler);
+    }, []);
+
+    const maskSize = isHovered ? revealSize : size;
+    const mx = (mousePosition.x ?? 0) - maskSize / 2;
+    const my = (mousePosition.y ?? 0) - maskSize / 2;
+    return (
+        <motion.div
+            ref={containerRef}
+            className={cn(
+                "relative h-screen w-full bg-black flex items-center justify-center transition-colors duration-300",
+                className
+            )}
+            onMouseMove={e => {
+                const rect = containerRef.current?.getBoundingClientRect();
+                if (rect) {
+                    setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                }
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {/* Revealed overlay */}
+            <motion.div
+                className="absolute inset-0 z-10 flex h-full w-full items-center justify-center bg-white text-black font-bold text-4xl md:text-7xl"
+                animate={{
+                    WebkitMaskPosition: `${mx}px ${my}px`,
+                    WebkitMaskSize: `${maskSize}px`,
+                    maskPosition: `${mx}px ${my}px`,
+                    maskSize: `${maskSize}px`,
+                }}
+                transition={{ type: "tween", ease: "backOut", duration: 0.1 }}
+                style={{
+                    WebkitMaskImage: `url("${MASK_DATA_URL}")`,
+                    WebkitMaskRepeat: "no-repeat",
+                    maskImage: `url("${MASK_DATA_URL}")`,
+                    maskRepeat: "no-repeat",
+                }}
+            >
+                <div
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    className="max-w-4xl mx-auto text-center px-4"
+                >
+                    {children}
+                </div>
+            </motion.div>
+
+            {/* Hidden Text beneath the mask */}
+            <div className="absolute flex h-full w-full items-center justify-center text-white font-bold text-4xl md:text-7xl">
+                <div className="max-w-4xl mx-auto text-center px-4">
+                    {revealText}
+                </div>
+            </div>
+
+        </motion.div>
+    );
+};
