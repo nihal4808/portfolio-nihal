@@ -157,8 +157,8 @@ export function MobileLayout({ projects, galleryImages }: { projects: GitHubRepo
                     <span className="text-base font-bold tracking-tighter text-white">NIHAL</span>
                 </div>
                 <div className="flex gap-3">
-                    <a href="https://github.com/nihal4808" className="p-1.5 text-slate-400"><Github size={18} /></a>
-                    <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" className="p-1.5 text-slate-400"><Linkedin size={18} /></a>
+                    <a href="https://github.com/nihal4808" target="_blank" rel="noreferrer" className="p-1.5 text-slate-400"><Github size={18} /></a>
+                    <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" target="_blank" rel="noreferrer" className="p-1.5 text-slate-400"><Linkedin size={18} /></a>
                 </div>
             </header>
 
@@ -297,13 +297,13 @@ export function MobileLayout({ projects, galleryImages }: { projects: GitHubRepo
                         </a>
 
                         <div className="flex justify-center gap-4 mt-8">
-                            <a href="https://github.com/nihal4808" className="p-3 bg-white/5 rounded-xl text-white border border-white/10 active:bg-white/10">
+                            <a href="https://github.com/nihal4808" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-xl text-white border border-white/10 active:bg-white/10">
                                 <Github size={20} />
                             </a>
-                            <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" className="p-3 bg-white/5 rounded-xl text-white border border-white/10 active:bg-white/10">
+                            <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-xl text-white border border-white/10 active:bg-white/10">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="https://www.instagram.com/___niha.l___" className="p-3 bg-white/5 rounded-xl text-white border border-white/10 active:bg-white/10">
+                            <a href="https://www.instagram.com/___niha.l___" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-xl text-white border border-white/10 active:bg-white/10">
                                 <Instagram size={20} />
                             </a>
                         </div>

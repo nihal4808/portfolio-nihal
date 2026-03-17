@@ -302,10 +302,10 @@ export function TabletLayout({ projects, galleryImages }: { projects: GitHubRepo
                         </div>
 
                         <div className="flex justify-center gap-8 relative z-10">
-                            <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-wider text-xs">
+                            <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-wider text-xs">
                                 <Linkedin size={18} /> LinkedIn
                             </a>
-                            <a href="https://www.instagram.com/___niha.l___" className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-wider text-xs">
+                            <a href="https://www.instagram.com/___niha.l___" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-wider text-xs">
                                 <Instagram size={18} /> Instagram
                             </a>
                         </div>
