@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { GitHubRepo } from "@/components/projects";
 import { GalleryImage } from "@/lib/gallery";
-import { Github, Linkedin, Instagram, Mail, FolderGit2, Link as LinkIcon, ChevronDown, ChevronUp, Cpu, Server, Code, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, FolderGit2, Link as LinkIcon, ChevronDown, ChevronUp, Cpu, Server, Code, ArrowRight, Camera } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { AboutSection } from "@/components/about-section";
@@ -139,7 +139,9 @@ export function MobileLayout({ projects, galleryImages }: { projects: GitHubRepo
     const scrollTo = (id: string) => {
         const el = document.getElementById(id);
         if (el) {
-            window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
+            const yOffset = -80;
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
         }
         setActiveSection(id);
     };
@@ -170,6 +172,7 @@ export function MobileLayout({ projects, galleryImages }: { projects: GitHubRepo
                         { id: "about", label: "Bio", icon: <Code size={18} /> },
                         { id: "projects", label: "Work", icon: <FolderGit2 size={18} /> },
                         { id: "github", label: "Code", icon: <Server size={18} /> },
+                        { id: "gallery", label: "Photography", icon: <Camera size={18} /> },
                         { id: "contact", label: "Mail", icon: <Mail size={18} /> },
                     ].map((item) => (
                         <button
@@ -282,7 +285,7 @@ export function MobileLayout({ projects, galleryImages }: { projects: GitHubRepo
                 {/* Contact Section */}
                 <section id="contact" className="scroll-mt-24">
                     <div className="p-8 rounded-3xl bg-zinc-900 border border-white/10 text-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.05),transparent_70%)]" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.05),transparent_70%)] pointer-events-none" />
 
                         <h2 className="text-3xl font-black text-white tracking-tighter mb-4">Let's Talk</h2>
                         <p className="text-sm text-slate-400 mb-8 max-w-[250px] mx-auto">
