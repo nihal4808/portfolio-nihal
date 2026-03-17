@@ -166,7 +166,7 @@ export function TabletLayout({ projects, galleryImages }: { projects: GitHubRepo
                             { id: "about", label: "Bio" },
                             { id: "projects", label: "Work" },
                             { id: "github", label: "Code" },
-                            { id: "gallery", label: "Photography" },
+                            { id: "gallery", label: "Gallery" },
                             { id: "contact", label: "Contact" },
                         ].map(item => (
                             <button

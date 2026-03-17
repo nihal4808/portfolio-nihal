@@ -172,7 +172,7 @@ export function MobileLayout({ projects, galleryImages }: { projects: GitHubRepo
                         { id: "about", label: "Bio", icon: <Code size={18} /> },
                         { id: "projects", label: "Work", icon: <FolderGit2 size={18} /> },
                         { id: "github", label: "Code", icon: <Server size={18} /> },
-                        { id: "gallery", label: "Photography", icon: <Camera size={18} /> },
+                        { id: "gallery", label: "Gallery", icon: <Camera size={18} /> },
                         { id: "contact", label: "Mail", icon: <Mail size={18} /> },
                     ].map((item) => (
                         <button
