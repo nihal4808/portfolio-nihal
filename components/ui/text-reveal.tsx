@@ -27,7 +27,7 @@ export function TextReveal({
     // Split by character if requested, otherwise by word
     const tokens = byCharacter ? text.split("") : text.split(" ");
 
-    const containerVariants = {
+    const containerVariants: any = {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
             opacity: 1,
@@ -35,7 +35,7 @@ export function TextReveal({
         }),
     };
 
-    const childVariants = {
+    const childVariants: any = {
         hidden: {
             opacity: 0,
             y: 20,
