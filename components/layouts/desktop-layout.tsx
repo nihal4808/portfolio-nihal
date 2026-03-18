@@ -19,7 +19,7 @@ export function DesktopLayout({ projects, galleryImages }: { projects: GitHubRep
 
             {/* Header Navigation */}
             <header className="fixed top-0 w-full z-50 px-6 py-6 flex justify-center">
-                <nav className="flex justify-between items-center px-8 py-4 bg-zinc-950/60 backdrop-blur-xl border border-white/5 rounded-2xl shadow-2xl w-full max-w-6xl">
+                <nav className="flex justify-between items-center px-8 py-4 bg-zinc-950/60 backdrop-blur-xl border border-white/5 rounded-2xl shadow-elevated w-full max-w-6xl">
                     <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center font-black text-black text-sm">N</div>
                         <div className="text-lg font-bold tracking-tighter text-white">NIHAL</div>
@@ -55,7 +55,7 @@ export function DesktopLayout({ projects, galleryImages }: { projects: GitHubRep
             </ScrollReveal>
 
             {/* Core Pillars - Glowing Effect Section */}
-            <ScrollReveal delay={0.1} className="py-24 px-6 max-w-7xl mx-auto" id="pillars">
+            <ScrollReveal delay={0.1} className="py-32 px-6 max-w-7xl mx-auto" id="pillars">
                 <section>
                     <div className="mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full bg-white/5 mb-6">
@@ -64,7 +64,7 @@ export function DesktopLayout({ projects, galleryImages }: { projects: GitHubRep
                         </div>
                         <TextReveal
                             text="Core Engineering Pillars"
-                            className="text-4xl md:text-5xl font-bold text-white tracking-tighter"
+                            className="text-5xl md:text-6xl font-bold text-white tracking-tighter"
                         />
                     </div>
                     <GlowingEffectDemo />
@@ -86,13 +86,16 @@ export function DesktopLayout({ projects, galleryImages }: { projects: GitHubRep
             </ScrollReveal>
 
             {/* 3D Photography Gallery */}
-            <ScrollReveal delay={0.1} className="py-24 px-6 max-w-[1400px] mx-auto" id="gallery">
+            <ScrollReveal delay={0.1} className="py-32 px-6 max-w-[1400px] mx-auto" id="gallery">
                 <section>
-                    <div className="mb-4">
+                    <div className="mb-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full bg-white/5 mb-6">
                             <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
                             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Visual Data</span>
                         </div>
+                        <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tighter">
+                            Gallery
+                        </h2>
                     </div>
                     <GalleryDemo images={galleryImages} />
                 </section>
@@ -101,49 +104,49 @@ export function DesktopLayout({ projects, galleryImages }: { projects: GitHubRep
             {/* Contact Section */}
             <ScrollReveal delay={0.1} className="py-40 px-6 max-w-5xl mx-auto relative" id="contact">
                 <section>
-                    <div className="glass rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group">
+                    <div className="glass-premium rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group border-white/10">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-[100px] -z-10 group-hover:bg-white/20 transition-all duration-1000"></div>
 
                         <span className="text-silver-accent font-black uppercase text-[11px] tracking-[0.4em] mb-8 block">Project Initiation</span>
                         <div className="flex justify-center mb-10">
                             <TextReveal
                                 text="WANT TO COLLABORATE?"
-                                className="text-4xl md:text-7xl font-black text-white tracking-tighter leading-none"
+                                className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none"
                             />
                         </div>
 
-                        <p className="text-slate-400 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
+                        <p className="text-slate-300 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
                             Currently available for innovative AI software partnerships and full-stack engineering roles.
                         </p>
 
                         <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-16">
                             <a href="mailto:muhamednihal190@gmail.com" className="flex items-center gap-3 text-white hover:text-slate-300 transition-colors group">
-                                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-white/10 group-hover:border-white/30 transition-all duration-500">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-500 shadow-clean hover:shadow-elevated">
                                     <Mail size={22} />
                                 </div>
                                 <span className="font-bold text-lg">Email</span>
                             </a>
                             <a href="https://www.instagram.com/___niha.l___" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white hover:text-slate-300 transition-colors group">
-                                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-white/10 group-hover:border-white/30 transition-all duration-500">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-500 shadow-clean hover:shadow-elevated">
                                     <Instagram size={22} />
                                 </div>
                                 <span className="font-bold text-lg">Instagram</span>
                             </a>
                             <a href="https://github.com/nihal4808" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white hover:text-slate-300 transition-colors group">
-                                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-white/10 group-hover:border-white/30 transition-all duration-500">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-500 shadow-clean hover:shadow-elevated">
                                     <Github size={22} />
                                 </div>
                                 <span className="font-bold text-lg">GitHub</span>
                             </a>
                             <a href="https://www.linkedin.com/in/muhammed-nihal-k-p-864230291" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white hover:text-slate-300 transition-colors group">
-                                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-white/10 group-hover:border-white/30 transition-all duration-500">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-500 shadow-clean hover:shadow-elevated">
                                     <Linkedin size={22} />
                                 </div>
                                 <span className="font-bold text-lg">LinkedIn</span>
                             </a>
                         </div>
 
-                        <a href="mailto:muhamednihal190@gmail.com" className="btn-primary px-16 py-6 text-lg tracking-widest uppercase inline-block">
+                        <a href="mailto:muhamednihal190@gmail.com" className="btn-primary px-16 py-6 text-lg tracking-widest uppercase inline-block shadow-elevated hover:shadow-floating">
                             INITIATE DATA STREAM
                         </a>
                     </div>

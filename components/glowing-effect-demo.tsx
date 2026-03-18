@@ -51,7 +51,7 @@ interface GridItemProps {
 const GridItem = ({ area, icon, title, description }: GridItemProps) => {
     return (
         <li className={cn("min-h-[14rem] list-none", area)}>
-            <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-white/10 p-2 md:rounded-[1.5rem] md:p-3 bg-black/40 backdrop-blur-md">
+            <div className="relative h-full rounded-2xl border-[0.75px] border-white/15 p-3 md:rounded-3xl md:p-4 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-xl shadow-elevated group hover:border-white/30 transition-all duration-500 hover:-translate-y-1">
                 <GlowingEffect
                     spread={40}
                     glow={true}
@@ -60,16 +60,16 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
                     inactiveZone={0.01}
                     borderWidth={3}
                 />
-                <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] border-white/5 bg-zinc-950 p-6 shadow-sm md:p-6">
-                    <div className="relative flex flex-1 flex-col justify-between gap-3">
-                        <div className="w-fit rounded-lg border-[0.75px] border-white/10 bg-white/5 p-2">
-                            {icon}
+                <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] border-white/10 bg-gradient-to-br from-black/60 to-black/80 p-7 shadow-clean group-hover:border-white/20 group-hover:shadow-elevated transition-all duration-500 md:p-7">
+                    <div className="relative flex flex-1 flex-col justify-between gap-4">
+                        <div className="w-fit rounded-xl border-[0.75px] border-white/15 bg-white/10 p-3 group-hover:bg-white/15 transition-all duration-500">
+                            <span className="text-slate-200">{icon}</span>
                         </div>
-                        <div className="space-y-3">
-                            <h3 className="pt-0.5 text-xl leading-[1.375rem] font-bold tracking-tight md:text-2xl md:leading-[1.875rem] text-white">
+                        <div className="space-y-4">
+                            <h3 className="pt-0.5 text-xl leading-[1.375rem] font-bold tracking-tight md:text-2xl md:leading-[1.875rem] text-white group-hover:text-white/95 transition-colors">
                                 {title}
                             </h3>
-                            <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-slate-400">
+                            <p className="font-sans text-sm leading-[1.25rem] md:text-base md:leading-[1.5rem] text-slate-400 group-hover:text-slate-300 transition-colors">
                                 {description}
                             </p>
                         </div>
